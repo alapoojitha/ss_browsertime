@@ -1,0 +1,93 @@
+{
+  "description": "Browsertime",
+  "version": "7.0.1",
+  "bin": "./bin/browsertime.js",
+  "dependencies": {
+    "@sitespeed.io/throttle": "0.5.4",
+    "adbkit": "2.11.1",
+    "btoa": "1.2.1",
+    "@sitespeed.io/chromedriver": "78.0.3904-70",
+    "chrome-har": "0.11.4",
+    "chrome-remote-interface": "0.28.0",
+    "dayjs": "1.8.15",
+    "del": "4.1.1",
+    "execa": "2.0.4",
+    "fast-stats": "0.0.5",
+    "find-up": "4.1.0",
+    "get-port": "5.0.0",
+    "hasbin": "1.2.3",
+    "intel": "1.2.0",
+    "lodash.foreach": "4.5.0",
+    "lodash.get": "4.4.2",
+    "lodash.groupby": "4.6.0",
+    "lodash.isempty": "4.4.0",
+    "lodash.merge": "4.6.2",
+    "lodash.pick": "4.4.0",
+    "lodash.remove": "4.7.0",
+    "lodash.set": "4.3.2",
+    "mkdirp": "0.5.1",
+    "selenium-webdriver": "4.0.0-alpha.4",
+    "@sitespeed.io/geckodriver": "0.26.0",
+    "@sitespeed.io/tracium": "0.3.3",
+    "speedline-core": "1.4.2",
+    "valid-url": "1.0.9",
+    "@cypress/xvfb": "1.2.4",
+    "yargs": "14.2.0"
+  },
+  "devDependencies": {
+    "bluebird": "3.5.5",
+    "chai": "4.2.0",
+    "chai-as-promised": "7.1.1",
+    "eslint": "6.2.2",
+    "eslint-config-prettier": "6.1.0",
+    "eslint-plugin-prettier": "3.1.0",
+    "longjohn": "0.2.12",
+    "mocha": "6.2.0",
+    "prettier": "1.18.2"
+  },
+  "engines": {
+    "node": ">=10.13.0"
+  },
+  "files": [
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "README.md",
+    "bin",
+    "browserscripts",
+    "browsersupport",
+    "browsertime.png",
+    "docs",
+    "index.js",
+    "lib",
+    "package.json",
+    "vendor"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/unitTests test/browserTests test/commandTests",
+    "test:unit": "mocha test/unitTests",
+    "test:browser": "mocha test/browserTests",
+    "test:commands": "mocha test/commandTests",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "eslint-check": "eslint --print-config .eslintrc.json | eslint-config-prettier-check",
+    "travis": "npm run eslint-check && npm run lint && npm run test"
+  },
+  "name": "browsertime",
+  "author": "Tobias Lidskog",
+  "contributors": [
+    {
+      "name": "Peter Hedenskog"
+    },
+    {
+      "name": "Jonathan Lee"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sitespeedio/browsertime.git"
+  },
+  "homepage": "https://www.sitespeed.io/documentation/browsertime/",
+  "license": "MIT"
+}
